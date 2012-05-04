@@ -1,18 +1,10 @@
-<% require 'time' %>
-
-<h1>All The Memes!</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @images.each do |image| %>
-  <tr>
-    <td><%= image.created_at %>
-    <td><%= image_tag image.picture %>
-  </tr>
-<% end %>
-</table>
+<ul class="thumbnails">
+  <% @images.each do |image| %>
+    <li class="span6">
+      <div class="thumbnail">
+        <p><%= image.created_at.strftime("Created %m/%d/%Y at %I:%M %p") %></p>
+        <%= image_tag image.picture %>
+      </div>
+    </li>
+  <% end %>
+</ul>
