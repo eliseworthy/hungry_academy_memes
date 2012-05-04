@@ -1,4 +1,4 @@
-
+<% require 'time' %>
 
 <h1>All The Memes!</h1>
 
@@ -11,6 +11,7 @@
 
 <% @images.each do |image| %>
   <tr>
+    <td><%= image.strftime("Printed on %m/%d/%Y at %I:%M%p") %>
     <td><%= image_tag image.picture %>
   </tr>
 <% end %>
