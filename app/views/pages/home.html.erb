@@ -11,7 +11,7 @@
 
 <% @images.each do |image| %>
   <tr>
-    <td><%= image.strftime("Printed on %m/%d/%Y at %I:%M%p") %>
+    <td><%= image.created_at %>
     <td><%= image_tag image.picture %>
   </tr>
 <% end %>
