@@ -1,0 +1,17 @@
+<h1>All The Memes!</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @images.each do |image| %>
+  <tr>
+    <td><%= image_tag image %>
+  </tr>
+<% end %>
+</table>
+
+

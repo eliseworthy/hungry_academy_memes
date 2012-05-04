@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def index
+  def home
     @images = Image.all
     end
   end
