@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  http_basic_authenticate_with :name => "bender", :password => "bender"
   # GET /images
   # GET /images.json
   def index
